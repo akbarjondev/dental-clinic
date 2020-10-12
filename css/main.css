@@ -943,6 +943,10 @@ main {
     margin-left: 6px;
   }
 }
+.appointment {
+  margin-bottom: 70px;
+}
+
 .appointment__container {
   display: flex;
 }
@@ -1114,6 +1118,225 @@ main {
   .from__submit {
     width: 100%;
   }
+}
+.services__text {
+  max-width: 580px;
+}
+
+.services__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.services__button {
+  flex-shrink: 0;
+  display: block;
+  width: 42px;
+  height: 49px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.services__button:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.services__button:active {
+  opacity: 0.6;
+}
+
+.services__button--left {
+  background-image: url("../img/left-button.png");
+}
+
+.services__button--right {
+  background-image: url("../img/right-button.png");
+}
+
+.services__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  overflow: hidden;
+  padding: 35px 0;
+  padding-left: 25px;
+  margin-right: 25px;
+  border-radius: 5px;
+}
+
+.service__item {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin-right: 35px;
+  padding: 29px 53px 24px;
+  background: #ffffff;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.service__item::before {
+  content: "";
+  width: 77px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.service__item--treatment::before {
+  background-image: url("../img/icon-treatment.png");
+}
+
+.service__item--hygiene::before {
+  background-image: url("../img/icon-chotka.png");
+}
+
+.service__item--diagnostics::before {
+  background-image: url("../img/icon-lupa.png");
+}
+
+.service__item--children::before {
+  background-image: url("../img/icon-children.png");
+}
+
+.service__item--diagnostics::before {
+  background-image: url("../img/icon-lupa.png");
+}
+
+.service__heading {
+  flex-grow: 1;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #272727;
+  text-align: center;
+}
+
+.service__del {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.25);
+}
+.service__del::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  margin-bottom: 12px;
+  background-color: #0055b8;
+}
+
+.service__ins {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #0055b8;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1024px) {
+  .services__list {
+    margin-left: 30px;
+    margin-right: 65px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .services__container {
+    padding-left: 12px;
+    padding-right: 37px;
+  }
+
+  .services__button {
+    display: none;
+  }
+
+  .services__list {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .services__button--left {
+    background-image: url("../img/left-button@2x.png");
+  }
+
+  .services__button--right {
+    background-image: url("../img/right-button@2x.png");
+  }
+
+  .service__item--treatment::before {
+    background-image: url("../img/icon-treatment@2x.png");
+  }
+
+  .service__item--hygiene::before {
+    background-image: url("../img/icon-chotka@2x.png");
+  }
+
+  .service__item--diagnostics::before {
+    background-image: url("../img/icon-lupa@2x.png");
+  }
+
+  .service__item--children::before {
+    background-image: url("../img/icon-children@2x.png");
+  }
+
+  .service__item--diagnostics::before {
+    background-image: url("../img/icon-lupa@2x.png");
+  }
+}
+.bg-heading-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("../img/bg-heading.svg");
+  background-repeat: no-repeat;
+  background-size: 275px 100px;
+  background-position: center bottom;
+}
+.bg-heading-text::before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  margin-bottom: 25px;
+  background-color: #ffd600;
+}
+.bg-heading-text h2 {
+  margin: 0 auto;
+  margin-bottom: 16px;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 500;
+  color: #272727;
+}
+.bg-heading-text p {
+  margin: 0 auto;
+  font-weight: 300;
+  color: #4d4d4d;
+}
+
+.modern__container--wide {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modern__inner--right {
+  max-width: 798px;
 }
 
 /*# sourceMappingURL=main.css.map */
