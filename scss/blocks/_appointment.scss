@@ -1,0 +1,73 @@
+.appointment__container {
+	display: flex;
+}
+.appointment__list {
+	@include list0;
+	display: flex;
+}
+.appointment__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 300px;
+	padding: 39px 37px 56px;
+	border-radius: 5px;
+	color: $main-black;
+	background-color: $main-yellow;
+	
+	&:last-child {
+		background-color: #ffe040;
+	}
+	&:last-child::before {
+		background-image: url("../img/icon-qolip.png");
+	}
+	&::before {
+		content: "";
+		width: 87px;
+		height: 87px;
+		margin-bottom: 20px;
+		background-image: url("../img/icon-teeth.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+}
+.appointment__heading {
+	margin: 0;
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 400;
+}
+.appointment__text {
+	font-weight: 300;
+}
+
+//responsive
+@include breakpoint-down(1024px) {
+	.appointment__container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@include breakpoint-down(375px) {
+	.appointment {
+		margin-top: 50px;
+	}
+	.appointment__list {
+		display: none;
+	}
+
+}
+
+//retina
+@include retina() {
+	.appointment__item {
+		&:last-child::before {
+			background-image: url("../img/icon-qolip@2x.png");
+		}
+		&::before {
+			background-image: url("../img/icon-teeth@2x.png");
+		}
+	}
+}

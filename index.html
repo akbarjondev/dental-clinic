@@ -15,7 +15,7 @@
 				<a class="site-header__tel tel" href="tel:+73422162227">
 					<span class="tel__wrapper">
 						Contact us 
-						<span class="tel__number">+7(342)216-22-27</span>
+						<span class="tel__number" aria-label="Phone number">+7(342)216-22-27</span>
 					</span>
 				</a>
 
@@ -128,7 +128,63 @@
 					</div>
 				</div><!-- End of container -->
 			</div><!-- End of slider-box -->
-		</section>
+		</section><!-- End of intro -->
+
+		<section class="appointment">
+			<h2 class="visually-hidden">Appointment section</h2>
+			<div class="container appointment__container">
+				<ul class="appointment__list">
+					<li class="appointment__item">
+						<h3 class="appointment__heading">Treatment</h3>
+						<div class="appointment__text">All types of dental treatment are carried out using the most modern technologies.</div>
+					</li>
+
+					<li class="appointment__item">
+						<h3 class="appointment__heading">Prosthetics</h3>
+						<div class="appointment__text">We will help you find the most convenient and aesthetically attractive version of the prosthesis.</div>
+					</li>
+				</ul><!-- End of appointment__list -->
+
+				<form class="appointment__form form" action="https://echo.htmlacademy.ru" method="POST">
+					<h3 class="from__heading">Appointment</h3>
+					<div class="from__group">
+						<label for="name" class="visually-hidden">Your name</label>
+						<input class="from__input from__name" type="text" name="name" placeholder="Name" id="name" required>
+					</div>
+					<div class="from__group">
+						<label for="tel" class="visually-hidden">Your phone</label>
+						<input class="from__input from__tel" type="tel" name="tel" placeholder="Phone" id="tel" pattern="^(?:\d{10,12}|\+\d{10,12}|\w+@\w+\.\w{2,4})$" required>
+					</div>
+
+					<div class="form__group form__con-wrapper">
+						<label class="form__label" aria-label="Your confirmation">
+							<div class="form__con">I give my consent to the storage and processing of personal data</div>
+							<input class="from__check" type="checkbox" name="check" required>
+							<span class="form__check-icon"></span>
+						</label>
+					</div>
+
+					<button class="from__submit button" type="submit">Appointment</button>
+				</form>
+			</div><!-- End of container -->
+		</section><!-- End of appointment -->
+
+		<section class="services">
+			<div class="container services__container">
+				<div class="services__top">
+					<h2 class="services__heading">Services</h2>
+					<p class="services__text">We provide a wide range of services from treatment to prosthetics. Therefore, you do not need to go anywhere else.</p>
+				</div><!-- End of services__top -->
+
+				<div class="services__bottom">
+					<button class="services__button services__button--left" type="button" aria-label="Prev"></button>
+
+					
+
+					<button class="services__button services__button--right" type="button" aria-label="Next"></button>
+				</div>
+			</div><!-- End of container -->
+		</section><!-- End of services -->
 	</main><!-- End of site-main -->
 
 	<footer class="site-footer">

@@ -16,11 +16,12 @@
 	overflow: hidden;
 }
 .slider {
+	position: relative;
 	flex-shrink: 0;
 	width: 100%;
-	min-height: 900px;
 }
 .slider__img {
+	display: block;
 	object-fit: cover;
 	object-position: right center;
 }
@@ -67,6 +68,7 @@
 	}
 	.slider__text {
 		margin: 0 auto;
+		margin-top: 20px;
 		max-width: 227px;
 		text-align: center;
 		line-height: 25px;
