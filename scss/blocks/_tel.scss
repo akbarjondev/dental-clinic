@@ -1,0 +1,40 @@
+.tel {
+	display: flex;
+	align-items: center;
+	width: 223px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #272727;
+
+	&::before {
+		flex-shrink: 0;
+		content: "";
+		width: 29px;
+		height: 29px;
+		margin-right: 7px;
+		background-image: url("../img/icon-phone.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+	&:active {
+		opacity: 0.6;
+	}
+}
+.tel__number {
+	display: block;
+	font-weight: 300;
+}
+
+// retina
+@include retina() {
+	.tel::before {
+		background-image: url("../img/icon-phone@2x.png");
+	}
+}

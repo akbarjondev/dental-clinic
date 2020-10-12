@@ -1,0 +1,36 @@
+.time {
+	display: flex;
+	align-items: center;
+
+	&::before {
+		flex-shrink: 0;
+		content: "";
+		width: 29px;
+		height: 29px;
+		margin-right: 7px;
+		background-image: url("../img/icon-clock.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;	
+	}
+}
+.time--open {
+	display: block;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+	color: #00b007;
+}
+.time__text {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+	color: #272727;
+}
+
+// retina
+@include retina() {
+	.time::before {
+		background-image: url("../img/icon-clock@2x.png");
+	}
+}
