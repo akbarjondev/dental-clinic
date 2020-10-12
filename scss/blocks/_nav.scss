@@ -69,7 +69,12 @@
 	cursor: pointer;
 }
 
-//responsive 
+//responsive
+@include breakpoint-up(1025px) {
+	.nav__list {
+		margin-left: 0;
+	}
+}
 
 @include breakpoint-down(1024px) {
 	.header-top {

@@ -656,6 +656,11 @@ main {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 1025px) {
+  .nav__list {
+    margin-left: 0;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .header-top {
     display: none;
@@ -1333,6 +1338,10 @@ main {
   color: #4d4d4d;
 }
 
+.modern {
+  margin-bottom: 70px;
+}
+
 .modern__container--wide {
   position: relative;
   display: flex;
@@ -1340,8 +1349,11 @@ main {
 }
 
 .modern__img {
+  flex-shrink: 0;
   position: absolute;
   left: -15%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .modern__inner--right {
@@ -1362,6 +1374,7 @@ main {
   font-size: 36px;
   line-height: 42px;
   font-weight: 500;
+  color: #272727;
 }
 
 .modern__text {
@@ -1400,10 +1413,80 @@ main {
   background-image: url("../img/icon-location.png");
 }
 
+.modern__item-heading {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.modern__item-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #4d4d4d;
+}
+
 @media only screen and (min-width: 1367px) {
   .modern__img {
     width: 750px;
     height: 613px;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .modern__img {
+    width: 641px;
+    height: 670px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .modern__img {
+    left: -1%;
+    width: 441px;
+    height: 662px;
+  }
+
+  .modern__inner--right {
+    max-width: 550px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .modern__container--wide {
+    flex-direction: column-reverse;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .modern__img {
+    position: static;
+    width: 375px;
+    height: 301px;
+    margin-bottom: 38px;
+    transform: translateY(0);
+    object-fit: cover;
+  }
+
+  .modern__inner--right {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .modern__text {
+    margin-top: 0;
+  }
+
+  .modern__item:not(:last-child) {
+    margin-bottom: 17px;
+  }
+
+  .modern__item-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .modern__item-text {
+    display: none;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {

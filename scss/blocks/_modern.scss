@@ -1,11 +1,17 @@
+.modern {
+	margin-bottom: 70px;
+}
 .modern__container--wide {
 	position: relative;
 	display: flex;
 	justify-content: flex-end;
 }
 .modern__img {
+	flex-shrink: 0;
 	position: absolute;
 	left: -15%;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .modern__inner--right {
 	display: flex;
@@ -23,6 +29,7 @@
 	font-size: 36px;
 	line-height: 42px;
 	font-weight: 500;
+	color: $main-black;
 }
 .modern__text {
 	font-weight: 300;
@@ -53,12 +60,73 @@
 .modern__item--location::before {
 	background-image: url("../img/icon-location.png");
 }
+.modern__item-heading {
+	margin: 0;
+	margin-bottom: 5px;
+	font-size: 18px;
+	line-height: 21px;
+	color: #000000;
+}
+.modern__item-text {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 300;
+	color: #4d4d4d;
+}
 
 //responsive
 @include breakpoint-up(1367px) {
 	.modern__img {
 		width: 750px;
 		height: 613px;
+	}
+}
+@include breakpoint-down(1366px) {
+	.modern__img {
+		width: 641px;
+		height: 670px;
+	}
+}
+@include breakpoint-down(1024px) {
+	.modern__img {
+		left: -1%;
+		width: 441px;
+		height: 662px;
+	}
+	.modern__inner--right {
+		max-width: 550px;
+	}
+}
+@include breakpoint-down(375px) {
+	.modern__container--wide {
+		flex-direction: column-reverse;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.modern__img {
+		position: static;
+		width: 375px;
+		height: 301px;
+		margin-bottom: 38px;
+		transform: translateY(0);
+		object-fit: cover;
+	}
+	.modern__inner--right {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.modern__text {
+		margin-top: 0;
+	}
+	.modern__item:not(:last-child) {
+		margin-bottom: 17px;
+	}
+	.modern__item-wrapper {
+		display: flex;
+		align-items: center;
+	}
+	.modern__item-text {
+		display: none;
 	}
 }
 
