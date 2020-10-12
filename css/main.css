@@ -1119,6 +1119,10 @@ main {
     width: 100%;
   }
 }
+.services__heading {
+  margin: 0 auto;
+}
+
 .services__text {
   max-width: 580px;
 }
@@ -1317,7 +1321,6 @@ main {
   background-color: #ffd600;
 }
 .bg-heading-text h2 {
-  margin: 0 auto;
   margin-bottom: 16px;
   font-size: 36px;
   line-height: 42px;
@@ -1325,18 +1328,96 @@ main {
   color: #272727;
 }
 .bg-heading-text p {
-  margin: 0 auto;
+  margin: 0;
   font-weight: 300;
   color: #4d4d4d;
 }
 
 .modern__container--wide {
+  position: relative;
   display: flex;
   justify-content: flex-end;
 }
 
+.modern__img {
+  position: absolute;
+  left: -15%;
+}
+
 .modern__inner--right {
+  display: flex;
+  flex-direction: column;
   max-width: 798px;
+  align-items: flex-start;
+}
+
+.modern__wrapper {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.modern__heading {
+  max-width: 390px;
+  margin: 0;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 500;
+}
+
+.modern__text {
+  font-weight: 300;
+}
+
+.modern__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.modern__item {
+  display: flex;
+}
+.modern__item::before {
+  flex-shrink: 0;
+  content: "";
+  width: 67px;
+  height: 67px;
+  margin-right: 33px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.modern__item--expert::before {
+  background-image: url("../img/icon-expert.png");
+}
+
+.modern__item--treatment::before {
+  background-image: url("../img/icon-treatment.png");
+}
+
+.modern__item--location::before {
+  background-image: url("../img/icon-location.png");
+}
+
+@media only screen and (min-width: 1367px) {
+  .modern__img {
+    width: 750px;
+    height: 613px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .modern__item--expert::before {
+    background-image: url("../img/icon-expert@2x.png");
+  }
+
+  .modern__item--treatment::before {
+    background-image: url("../img/icon-treatment@2x.png");
+  }
+
+  .modern__item--location::before {
+    background-image: url("../img/icon-location@2x.png");
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
