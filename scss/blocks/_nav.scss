@@ -1,6 +1,7 @@
 .nav {
 	position: relative;
 	top: 0;
+	z-index: 10000;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -15,6 +16,9 @@
 .nav__list {
 	@include list0;
 	display: flex;
+	flex-wrap: wrap;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 .nav__item:not(:last-child) {
 	margin-right: 35px;
@@ -34,9 +38,11 @@
 	}
 }
 .nav__socials-list {
+	flex-shrink: 0;
 	@include list0;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .nav__socials-item:not(:last-child) {
 	margin-right: 13px;
@@ -66,9 +72,6 @@
 //responsive 
 
 @include breakpoint-down(1024px) {
-	body {
-		margin-top: 83px;
-	}
 	.header-top {
 		display: none;
 	}
@@ -87,14 +90,13 @@
 }
 
 @include breakpoint-down(375px) {
-	body {
-		margin-top: 65px;
-	}
 	.nav {
 		padding: 23px 20px;
 	}
 	.nav__list {
 		display: none;
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.nav__socials-list {
 		display: none;
@@ -132,12 +134,12 @@
 		color: $main-yellow;
 		background-color: $main-blue;
 
-		&:hover {
+		&:active {
+			opacity: 1;
 			color: $main-blue;
 			background-color: $main-yellow;
 		}
 	}
-
 	.nav__socials-list.nav__socials-list--toggle {
 		position: absolute;
 		left: 0;
@@ -153,5 +155,46 @@
 	.nav__socials-list.nav__socials-list--toggle .nav__socials-item {
 		margin-right: 6px;
 		margin-left: 6px;
+	}
+
+	// nojs
+	.nav.nojs {
+		position: static;
+		flex-direction: column;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.nav.nojs .nav__list {
+		position: static;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		width: 100%;
+		margin-top: 24px;
+	}
+	.nav.nojs .nav__list .nav__item {
+		margin-right: 0;
+		text-align: center;
+	}
+	.nav.nojs .nav__list .nav__link {
+		display: block;
+		border: 1px solid $main-yellow;
+		padding-top: 23px;
+		padding-bottom: 23px;
+	}
+	.nav.nojs .nav__socials-list {
+		margin-top: 24px;
+		display: flex;
+	}
+	.nav.nojs .nav__button {
+		display: none;
+	}
+}
+
+// retina
+@include retina() {
+	.nav__button {
+		background-image: url("../img/hamburger@2x.png");
 	}
 }

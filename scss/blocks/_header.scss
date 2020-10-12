@@ -8,3 +8,22 @@
 	padding-top: 12px;
 	padding-bottom: 16px;
 }
+
+// responsive
+
+@include breakpoint-up(1025px) {
+	.nav {
+		transform: translateY(-50%);
+	}
+}
+@include breakpoint-up(1024px) {
+	.site-header {
+		position: fixed;
+		width: 100%;
+		z-index: 1000;
+		top: 0;
+	}
+	.site-header__top {
+		padding-bottom: 45px;
+	}
+}

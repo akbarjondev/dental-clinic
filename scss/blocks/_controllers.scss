@@ -1,0 +1,53 @@
+.controllers {
+	position: absolute;
+	bottom: 147px;
+	left: auto;
+	align-self: flex-start;
+}
+.controllers__button {
+	background-color: $main-yellow;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.8;
+	}
+	&:active {
+		opacity: 0.6;
+	}
+}
+.controllers__button--left {
+	width: 42px;
+	height: 70px;
+	background-image: url("../img/left-arrow.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 12px 22px;
+}
+.controllers__button--right {
+	width: 70px;
+	height: 70px;
+	margin-left: 9px;
+	background-image: url("../img/right-arrow.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25px 22px;
+}
+
+// responsive
+@include breakpoint-down(375px) {
+	.controllers {
+		// bottom: 23px;
+		top: 71%;
+	}
+	.controllers__button--left {
+		width: 27px;
+		height: 44px;
+	}
+	.controllers__button--right {
+		width: 44px;
+		height: 44px;
+		margin-left: 6px;
+	}
+}
