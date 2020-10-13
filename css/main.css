@@ -1573,5 +1573,133 @@ main {
     margin-right: 10px;
   }
 }
+.confident {
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.confident__container--wide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 95px;
+  padding-bottom: 90px;
+}
+
+.confident__inner {
+  max-width: 785px;
+}
+
+.confident__cover {
+  right: -15%;
+  left: auto;
+}
+
+.confident__wrapper {
+  width: 100%;
+  align-items: flex-end;
+  background-position: right top;
+}
+
+.confident__heading {
+  align-self: flex-start;
+  max-width: 790px;
+  text-align: left;
+}
+
+.modern__inner--bottom {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 34px;
+}
+
+.confident__img {
+  flex-shrink: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: 36px;
+}
+
+.confident__link {
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: #0055b8;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 1367px) {
+  .confident__cover {
+    width: 750px;
+    height: 600px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .confident__cover {
+    width: 650px;
+    height: 600px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .confident {
+    margin-top: 0;
+  }
+
+  .confident__wrapper {
+    background-position: right top 20px;
+  }
+
+  .confident__inner {
+    max-width: 520px;
+    padding-left: 32px;
+  }
+
+  .confident__heading {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .confident__cover {
+    right: -5%;
+    width: 443px;
+    height: 600px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .confident__container--wide {
+    flex-direction: column-reverse;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .confident__wrapper {
+    align-items: flex-start;
+    background-position: left top 30px;
+    padding-right: 20px;
+  }
+
+  .confident__inner {
+    padding-left: 20px;
+  }
+
+  .confident__heading {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .confident__cover {
+    width: 464px;
+    height: 309px;
+    margin-bottom: 20px;
+  }
+
+  .confident__link {
+    max-width: 175px;
+    padding: 24px 42px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
