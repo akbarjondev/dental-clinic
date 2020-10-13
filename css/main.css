@@ -371,6 +371,21 @@ html {
   scroll-behavior: smooth;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.body.nojs {
+  margin-top: 0;
+}
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -385,21 +400,6 @@ main {
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
-}
-
-.body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-}
-
-.body.nojs {
-  margin-top: 0;
 }
 
 @media only screen and (min-width: 1025px) {
