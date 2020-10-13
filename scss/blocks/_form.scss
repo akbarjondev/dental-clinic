@@ -9,7 +9,7 @@
 	background-color: $main-blue;
 	border-radius: 5px;
 }
-.from__heading {
+.form__heading {
 	margin: 0;
 	margin-bottom: 29px;
 	font-size: 36px;
@@ -17,7 +17,7 @@
 	font-weight: 500;
 	color: #ffffff;
 }
-.from__group {
+.form__group {
 	width: 100%;
 	margin-bottom: 12px;
 }
@@ -30,7 +30,7 @@
 	background-position: center;
 	background-size: contain;
 }
-.from__input {
+.form__input {
 	width: 100%;
 	padding: 21px 14px;
 	background-color: transparent;
@@ -49,8 +49,12 @@
 		color: $main-black;
 		background-color: #ffffff;
 	}
+	&:focus {
+		color: $main-black;
+		background-color: #ffffff;
+	}
 }
-.from__submit {
+.form__submit {
 	min-width: 100px;
 	padding: 17px 63px;
 	text-transform: capitalize;
@@ -72,7 +76,7 @@
 	font-weight: 300;
 	color: #ffffff;
 }
-.from__check {
+.form__check {
 	display: none;
 
 	&:checked + .form__check-icon {
@@ -88,7 +92,7 @@
 
 // responsive
 @include breakpoint-down(375px) {
-	.from__submit {
+	.form__submit {
 		width: 100%;
 	}
 }

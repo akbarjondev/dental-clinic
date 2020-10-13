@@ -1038,7 +1038,7 @@ main {
   border-radius: 5px;
 }
 
-.from__heading {
+.form__heading {
   margin: 0;
   margin-bottom: 29px;
   font-size: 36px;
@@ -1047,7 +1047,7 @@ main {
   color: #ffffff;
 }
 
-.from__group {
+.form__group {
   width: 100%;
   margin-bottom: 12px;
 }
@@ -1062,7 +1062,7 @@ main {
   background-size: contain;
 }
 
-.from__input {
+.form__input {
   width: 100%;
   padding: 21px 14px;
   background-color: transparent;
@@ -1070,19 +1070,23 @@ main {
   border-radius: 5px;
   color: #ffffff;
 }
-.from__input::placeholder {
+.form__input::placeholder {
   font-size: 14px;
   line-height: 16px;
   font-weight: 300;
   color: #ffffff;
   opacity: 0.5;
 }
-.from__input:valid {
+.form__input:valid {
+  color: #272727;
+  background-color: #ffffff;
+}
+.form__input:focus {
   color: #272727;
   background-color: #ffffff;
 }
 
-.from__submit {
+.form__submit {
   min-width: 100px;
   padding: 17px 63px;
   text-transform: capitalize;
@@ -1107,10 +1111,10 @@ main {
   color: #ffffff;
 }
 
-.from__check {
+.form__check {
   display: none;
 }
-.from__check:checked + .form__check-icon {
+.form__check:checked + .form__check-icon {
   background-image: url("../img/icon-checked.svg");
 }
 
@@ -1122,7 +1126,7 @@ main {
 }
 
 @media only screen and (max-width: 375px) {
-  .from__submit {
+  .form__submit {
     width: 100%;
   }
 }
