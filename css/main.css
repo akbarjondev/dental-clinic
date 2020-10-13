@@ -1507,6 +1507,7 @@ main {
 }
 .team {
   margin-top: 50px;
+  margin-bottom: 70px;
 }
 
 .team__text {
@@ -1557,6 +1558,20 @@ main {
   font-weight: 300;
   line-height: 21px;
   color: #000000;
+}
+
+@media only screen and (max-width: 1024px) {
+  .team__item {
+    width: 252px;
+    height: auto;
+    margin-right: 43px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .team__list {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
