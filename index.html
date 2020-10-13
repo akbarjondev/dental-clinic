@@ -15,7 +15,7 @@
 				<a class="site-header__tel tel" href="tel:+73422162227">
 					<span class="tel__wrapper">
 						Contact us 
-						<span class="tel__number" aria-label="Phone number">+7(342)216-22-27</span>
+						<span class="tel__number">+7(342)216-22-27</span>
 					</span>
 				</a>
 
@@ -97,8 +97,8 @@
 				      <!-- max-width 375px webp -->
 				      <source type="image/webp" media="(max-width:375px)" srcset="img/slide-girl-375.webp 1x, img/slide-girl-375@2x.webp 2x">
 
-				      <!-- max-width 375 -->
-				      <source media="(max-width:375)" srcset="img/slide-girl-375.png 1x, img/slide-girl-375@2x.png 2x">
+				      <!-- max-width 375px -->
+				      <source media="(max-width:375px)" srcset="img/slide-girl-375.png 1x, img/slide-girl-375@2x.png 2x">
 
 				      <!-- max-width 1024px -->
 				      <source media="(max-width:1024px)" srcset="img/slide-girl-1024.png 1x, img/slide-girl-1024@2x.png 2x">
@@ -158,7 +158,7 @@
 
 					<div class="form__group form__con-wrapper">
 						<label class="form__label" aria-label="Your confirmation">
-							<div class="form__con">I give my consent to the storage and processing of personal data</div>
+							<span class="form__con">I give my consent to the storage and processing of personal data</span>
 							<input class="form__check" type="checkbox" name="check" required>
 							<span class="form__check-icon"></span>
 						</label>
@@ -247,7 +247,7 @@
 							</div>
 						</li>
 					</ul><!-- End of modern__list -->
-				</div><!-- End of modern__inner--right -->
+				</div><!-- End of modern__inner-->
 
 				<picture>
 					<!-- max-width 375px -->
@@ -318,7 +318,7 @@
 						<img class="confident__img" src="img/sign.png" srcset="img/sign.png 1x, img/sign@2x.png 2x" alt="Sign" width="85" height="70">
 						<a class="confident__link button" href="#">Learn more</a>
 					</div>				
-				</div><!-- End of modern__inner--right -->
+				</div><!-- End of modern__inner -->
 
 				<picture>
 					<!-- max-width 375px -->
@@ -368,7 +368,56 @@
 				</div>
 			</div><!-- End of container -->
 		</section><!-- End of reviews -->
+		
+		<section class="location" id="contacts">
+			<div class="bg-heading-text location__bg-heading">
+				<h2 class="team__heading">Convenient location and working hours</h2>
+				<p class="team__text location__text">Our clinic is located in the center of the Sverdlovsk district, at the address: Raboche-Krestyanskaya Street 6. From the bus stop “Family” hypermarket to our dental clinic - 5 minutes on foot.</p>
+			</div>
 
+			<a class="location__link" target="_blank" href="https://yandex.com/maps/-/CCQxVGfz2C">
+				<span class="visually-hidden">Link to map</span>
+				
+				<picture>
+					<!-- max-width 375px -->
+				  <source media="(max-width:375px)" srcset="img/map-375.png 1x, img/map-375@2x.png 2x">
+
+				  <!-- max-width 1024px -->
+				  <source media="(max-width:1024px)" srcset="img/map-1024.png 1x, img/map-1024@2x.png 2x">
+				
+				  <!-- max-width 1440px -->
+				  <source media="(max-width:1440px)" srcset="img/map-1440.png 1x, img/map-1440@2x.png 2x">
+				
+				  <!-- Default image -->
+				  <img class="location__img" src="img/map-1920.png" alt="Map location" width="1920" height="947" srcset="img/map-1920.png 1x, img/map-1920@2x.png 2x" aria-hidden="true">
+				</picture>
+
+			</a>
+
+			<div class="container form-wrapper-container">
+				<form class="appointment__form form location__form" action="https://echo.htmlacademy.ru" method="POST" aria-label="Survey form">
+					<h3 class="form__heading">Appointment</h3>
+					<div class="form__group">
+						<label for="name" class="visually-hidden">Your name</label>
+						<input class="form__input form__name" type="text" name="name" placeholder="Name" id="name" required>
+					</div>
+					<div class="form__group">
+						<label for="tel" class="visually-hidden">Your phone</label>
+						<input class="form__input form__tel" type="tel" name="tel" placeholder="Phone" id="tel" pattern="^(?:\d{10,12}|\+\d{10,12}|\w+@\w+\.\w{2,4})$" required>
+					</div>
+
+					<div class="form__group form__con-wrapper">
+						<label class="form__label" aria-label="Your confirmation">
+							<span class="form__con">I give my consent to the storage and processing of personal data</span>
+							<input class="form__check" type="checkbox" name="check" required>
+							<span class="form__check-icon"></span>
+						</label>
+					</div>
+
+					<button class="form__submit button" type="submit">Appointment</button>
+				</form>
+			</div><!-- End of container -->
+		</section><!-- End of location -->
 
 	</main><!-- End of site-main -->
 
